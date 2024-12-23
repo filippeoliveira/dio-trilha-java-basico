@@ -6,7 +6,7 @@ public class ContaTerminal {
 
     static String agencia = "067-8";
     static int numero = 1021;
-    static String nomeCliente = "Mario Andrade";
+    static String nomeCliente;
     static double saldo = 237.48;
     static Scanner entrada = new Scanner(System.in);
     static int inicio = 0;
@@ -74,10 +74,14 @@ public class ContaTerminal {
                 case 2:
                         System.out.println("Por favor insira seu cpf");
                         cpf= entrada.next();
+                        System.out.println("Por favor insira seu nome");
+                        nomeCliente = entrada.next();
                         System.out.println("Olá "+nomeCliente+", obrigado por criar uma conta em nosso banco, sua agência é "+agencia+", conta é" +numero+ " e seu saldo é "+saldo+" já está disponível para saque.");
                         pressKey();
                         escolha1();
+                        entrada.close();2
                     break;
+                    
 
                 default:
                         System.out.println("Opção incorreta!");
@@ -87,7 +91,7 @@ public class ContaTerminal {
           }
 
           public static void escolha2(){
-                System.out.println("Seja Be, Vindo ao seu banco MARIO ANDRADE");
+                System.out.println("Seja Bem Vindo ao seu banco "+nomeCliente);
                 System.out.println("-------------------------------------------\n"+
                                    "     Escolha uma das opções abaixo:        \n"+
                                    "-------------------------------------------\n"+
@@ -171,6 +175,3 @@ public class ContaTerminal {
         }
 
         
-
-      
-   
